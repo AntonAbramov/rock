@@ -52,7 +52,7 @@ textarea {
 .cf {
 	&:after {
 		content:"";
-//		display: table;
+		display: table;
 		clear:both;
 	}
 }
@@ -79,6 +79,9 @@ textarea {
 	}
 }
 .wrapper {
+	&.cf:after {
+		display: table;
+	}
 	.latest-video {
 		float:left;
 		width:200px;
@@ -106,6 +109,9 @@ textarea {
 		margin-left:200px;
 		background: #fff;
 		padding:30px;
+		> .cf:after {
+			display: inline-block;
+		}
 	}
 }
 .aside {
@@ -186,6 +192,7 @@ textarea {
 .news-container {
 	margin:0 0 30px;
 	.news-item {
+		overflow: hidden;
 		img.left {
 			width:175px;
 			display: block;
@@ -198,6 +205,10 @@ textarea {
 			color: #ef1b1b;
 			font-weight: 700;
 			text-transform: uppercase;
+		}
+		.date {
+			font-weight: 700;
+			font-size: 12px;
 		}
 		p {
 			line-height: 18px;
@@ -252,4 +263,54 @@ textarea {
 	.tr {
 		display: table-row;
 	}
+}
+.pagination {
+	@extend .cf;
+	margin:0 0 30px;
+	li {
+		float:left;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-left: 15px;
+		}
+		margin-left: 15px;
+		a {
+			font-weight: 700;
+			color:#c2c2c2;
+			font-size: 16px;
+			text-transform: uppercase;
+			&.active, &:hover {
+				color: #ef1b1b;
+			}
+		}
+	}
+}
+
+.top-tab-nav {
+	margin:30px 0;
+	@extend .cf;
+	a {
+		display: block;
+		padding:5px;
+		line-height: 14px;
+		font-size: 14px;
+		float:left;
+		color: #ef1b1b;
+		margin-left: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+		&:first-child {
+			margin-left: 0;
+		}
+		&.active {
+			background: #000;
+			color:#fff;
+		}
+	}
+}
+.gray-link {
+	display: block;
+	color:#424242;
 }

@@ -34,6 +34,9 @@
 			text-transform: uppercase;
 			margin-bottom:20px;
 			text-align: right;
+			a {
+				color:#c4c4c4;
+			}
 		}
 		.header-mid {
 			.search {
@@ -43,6 +46,7 @@
 					display: block;
 					height:28px;
 					margin-left: 20px;
+					font-family: "PT Sans", sans-serif;
 				}
 				float:right;
 				input {
@@ -56,6 +60,7 @@
 					margin-left: 5px;
 					font-size: 16px;
 					color:#4a4a4a;
+					padding:0 20px;
 				}
 
 			}
