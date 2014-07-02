@@ -1,0 +1,31 @@
+.slider {
+	position: relative;
+	margin:0 -55px;
+	padding:0 55px;
+}
+
+.slidesjs-pagination {
+	display: none;
+}
+
+.slidesjs-navigation {
+	position: absolute;
+	top:50%;
+	z-index: 11;
+	width:37px;
+	height:62px;
+	margin-top:-31px;
+	opacity: .7;
+	text-indent: -999em;
+	&:hover {
+		opacity: 1;
+	}
+}
+.slidesjs-previous {
+	@include icons-sprite(slide-left-arrow);
+	left:0px;
+}
+.slidesjs-next {
+	@include icons-sprite(slide-right-arrow);
+	right:0px;
+}

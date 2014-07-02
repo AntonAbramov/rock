@@ -22,13 +22,14 @@
 	top: 0;
 	left: 0;
 	z-index: 8020;
+	display: none;
 }
 
 .fancybox-skin {
 	position: relative;
 	background: #f9f9f9;
 	color: #444;
-	padding:60px 10px 10px!important;
+	padding:60px 0 0px!important;
 	text-shadow: none;
 }
 
@@ -119,12 +120,12 @@
 }
 
 .fancybox-prev {
-	right: 80px;
+	right: 100px;
 	@include icons-sprite(prev);
 }
 
 .fancybox-next {
-	right: 45px;
+	right: 55px;
 	@include icons-sprite(next);
 }
 

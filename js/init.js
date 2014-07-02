@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+	slider();
+	fancy();
 
 });
 
@@ -48,3 +49,37 @@ var tabs = function () {
 }
 
 
+var slider = function () {
+	if ($('.slider').length) {
+		$('.slider').slidesjs({
+			//	width: 940,
+			height: 400
+		});
+	}
+}
+
+var fancy = function () {
+	if ($(".fancybox").length) {
+		$(".fancybox").fancybox({
+			helpers: {
+				title: {
+					type: 'outside'
+				}
+			}
+		});
+	}
+
+	if($(".various").length){
+		$(".various").fancybox({
+			maxWidth	: 800,
+			maxHeight	: 700,
+			fitToView	: false,
+			width		: '80%',
+			height		: '80%',
+			autoSize	: false,
+			closeClick	: false,
+			openEffect	: 'none',
+			closeEffect	: 'none'
+		});
+	}
+}
