@@ -19,10 +19,10 @@
 
 .fancybox-wrap {
 	position: absolute;
-	top: 0;
+	top: -9990em;
 	left: 0;
 	z-index: 8020;
-	display: none;
+//	display: none;
 }
 
 .fancybox-skin {
@@ -120,7 +120,7 @@
 }
 
 .fancybox-prev {
-	right: 100px;
+	right: 90px;
 	@include icons-sprite(prev);
 }
 
@@ -204,9 +204,10 @@
 	width:100%;
 	height:48px;
 	font-size: 24px;
-
+	color:#ef1b1b;
 	text-shadow: none;
 	z-index: 8050;
+	font-weight: 700;
 }
 
 .fancybox-opened .fancybox-title {
@@ -215,9 +216,8 @@
 
 .fancybox-title-float-wrap {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	right: 50%;
-	margin-bottom: -35px;
 	z-index: 8050;
 	text-align: left;
 }
@@ -233,9 +233,9 @@
 }
 
 .fancybox-title-outside-wrap {
-	position: relative;
-	margin-top: 10px;
-	color: #fff;
+//	position: relative;
+//	margin-top: 10px;
+//	color: #fff;
 }
 
 .fancybox-title-over-wrap {

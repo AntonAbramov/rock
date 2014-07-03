@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	slider();
 	fancy();
-
+	popup();
 });
 
 $(window).resize(function () {
@@ -18,7 +18,7 @@ var popup = function () {
 		$(this).fadeOut();
 		$('.popup').fadeOut();
 	})
-	$(".popup").find(".close").on("click", function () {
+	$(".popup").find(".close, .icons-close").on("click", function () {
 		$(".overlay").fadeOut();
 		$('.popup').fadeOut();
 	});
@@ -61,6 +61,8 @@ var slider = function () {
 var fancy = function () {
 	if ($(".fancybox").length) {
 		$(".fancybox").fancybox({
+			openEffect	: 'none',
+			closeEffect	: 'none',
 			helpers: {
 				title: {
 					type: 'outside'
