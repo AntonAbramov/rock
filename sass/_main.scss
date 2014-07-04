@@ -355,6 +355,16 @@ textarea {
 .concert-big-preview.concert-info img.left + .concert-info-container {
 	margin-left: 340px;
 }
+input[type='text'],
+input[type='password'],
+input[type='email']{
+		display: inline-block;
+		font-family: 'PT Sans', sans-serif;
+		padding:0 10px;
+		border:1px solid #d3d3d3;
+		height:28px;
+		line-height: 26px;
+	}
 .contacts-body {
 	overflow: hidden;
 	margin-bottom: 40px;
@@ -390,14 +400,7 @@ textarea {
 	}
 
 	input[type='text'] {
-		display: block;
-		margin-bottom:10px;
 		width:46%;
-		font-family: 'PT Sans', sans-serif;
-		padding:0 10px;
-		border:1px solid #d3d3d3;
-		height:28px;
-		line-height: 26px;
 	}
 	textarea {
 		width:100%;
@@ -420,7 +423,18 @@ textarea {
 		font-size: 14px;
 	}
 }
-
+.btn-default {
+	display: inline-block;
+	height:40px;
+	text-align: center;
+	width:140px;
+	color:#fff;
+	text-transform: uppercase;
+	border:none;
+	background: #e1e1e1;
+	font-weight: 700;
+	font-size: 14px;
+}
 
 .filte-download {
 	margin-bottom: 20px;
@@ -525,4 +539,275 @@ textarea {
 }
 .galery-container .preview-box + .galery-content{
 	margin-left: 180px;
+}
+
+.table-info {
+	width:100%;
+	margin-bottom:40px;
+	td {
+		line-height: 20px;
+		padding:10px;
+		font-family: "PT Sans", sans-serif;
+		text-align: center;
+	}
+	thead {
+		td {
+			font-family: "Open Sans Condensed", sans-serif;
+			border:1px solid #ccc;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+
+	}
+	tbody {
+		tr:nth-of-type(2n){
+			background: #ebebeb;
+		}
+	}
+
+}
+.post {
+	overflow: hidden;
+	margin-bottom: 10px;
+	img.left {
+		margin:0 15px 15px 0;
+	}
+	.title {
+		font-weight: 700;
+	}
+	b {
+		text-transform: uppercase;
+		color:#fff;
+	}
+}
+.two-columns {
+	@extend .cf;
+	.column {
+		width:48%;
+	}
+	.column:first-child{
+		float:left;
+	}
+	.column:first-child + .column {
+		float:right;
+	}
+
+}
+.list-ok,
+.list-romb {
+	li {
+		padding-left: 25px;
+		position: relative;
+		font-family: "PT Sans", sans-serif;
+		&:before {
+			content:"";
+			position: absolute;
+			left:0;
+			top:1px;
+		}
+	}
+}
+.list-ok {
+	li:before {
+		@include icons-sprite(ok);
+		width:17px;
+		height:16px;
+	}
+}
+.list-romb {
+	li {
+		color:#186608;
+	}
+	li:before {
+		@include icons-sprite(romb);
+		width:12px;
+		height:12px;
+		top:3px;
+	}
+}
+.music-box {
+	margin-bottom: 30px;
+	.music-header {
+		background: #ef1b1b;
+		color:#fff;
+		font-size: 13px;
+		padding:0 10px;
+		.title {
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+		.year {
+			font-family: "PT Sans", sans-serif;
+		}
+	}
+	.music-preview {
+		position: relative;
+		img {
+			display: block;
+			max-width: 100%;
+		}
+		.description {
+			border:5px solid #ef1b1b;
+			border-top:none;
+			display: none;
+			width:100%;
+			height:100%;
+			position: absolute;
+			font-family: "PT Sans", sans-serif;
+			top:0;
+			left:0;
+			z-index: 2;
+			background: rgba(0,0,0, .7);
+			padding:15px;
+			color:#fff;
+		}
+		&:hover {
+			.description {
+				display: block;
+
+			}
+		}
+	}
+}
+.link-alboms {
+	text-decoration: underline;
+	color:#424242;
+	font-weight: 700;
+}
+.albom-block {
+	overflow: hidden;
+	margin-bottom: 10px;
+	font-family: "PT Sans";
+	img.left {
+		margin-right: 15px;
+		margin-bottom: 15px;
+	}
+
+}
+.albom-list {
+	li {
+		padding:5px 10px;
+		font-size: 16px;
+		font-family: "PT Sans", sans-serif;
+		a {
+			color:#424242;
+			&:hover {
+				color:#ef1b1b;
+			}
+		}
+		&:nth-of-type(2n){
+			background: #f2f2f2;
+		}
+		.icons-next-play {
+			margin-left: 10px;
+			position: relative;
+			top:2px;
+		}
+		.icons-doc {
+			margin-left: 10px;
+		}
+	}
+}
+.music-text {
+	font-family: "PT Sans", sans-serif;
+	line-height: 24px;
+	.title {
+		font-family: "Open Sans Condensed";
+		font-size: 14px;
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
+}
+
+.faq-list {
+		li {
+			position: relative;
+			padding-left: 40px;
+			margin-bottom: 30px;
+			font-family: "PT Sans", sans-serif;
+			&:hover {
+				&:before {
+					background: #ef1b1b;
+				}
+			}
+			&:before {
+				content:"+";
+				width:21px;
+				height:21px;
+				line-height:21px;
+				text-align: center;
+				position: absolute;
+				left:0;
+				top:0;
+				z-index: 2;
+				color:#fff;
+
+				background: #333333;
+			}
+			.heading {
+				font-weight: 700;
+				font-size: 16px;
+				color:#424242;
+				cursor: pointer;
+				font-family: "Open Sans Condensed", sans-serif;
+			}
+			.faq-list-container {
+				color:#424242;
+				display: none;
+				margin-top:15px;
+			}
+			&.active {
+				&:before {
+					content:"-";
+					background: #ef1b1b;
+				}
+				.faq-list-container {
+					display: block;
+				}
+			}
+		}
+	}
+
+
+.subscribe-form {
+	input[type='text'],
+	input[type='password'],
+	input[type='email'] {
+		width:50%;
+	}
+	input[type='submit'] {
+		width:auto;
+		padding-left: 30px;
+		padding-right: 30px;
+		font-family: "Open Sans Condensed";
+	}
+}
+
+.error-msg {
+	display: none;
+}
+.error {
+
+	input {
+		border-color:#e55858;
+	}
+	.error-msg {
+		vertical-align: top;
+		display: inline-block;
+		background: #e55858;
+		color:#fff;
+		font-family: "PT Sans", sans-serif;
+		font-size: 12px;
+		height:22px;
+		line-height: 22px;
+		padding:0 10px;
+	}
+}
+.enter-with-sosial {
+	font-family: "PT Sans", sans-serif;
+	line-height: 38px;
+	vertical-align: top;
+	.icons-vk-reg {
+		margin-left: 5px;
+	}
 }

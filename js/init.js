@@ -2,6 +2,7 @@ $(document).ready(function () {
 	slider();
 	fancy();
 	popup();
+	faqList();
 });
 
 $(window).resize(function () {
@@ -84,4 +85,11 @@ var fancy = function () {
 			closeEffect	: 'none'
 		});
 	}
+}
+
+faqList = function () {
+	$('.faq-list').find('.heading').on('click', function () {
+		$(this).parents('li').toggleClass('active');
+	})
+
 }

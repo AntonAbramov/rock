@@ -18,4 +18,13 @@
 	width:600px;
 	margin-left: -300px;
 	margin-top:-200px;
+	button.close {
+		float:right;
+		background: none;
+		border:none;
+		position: absolute;
+		top:20px;
+		right:20px;
+		z-index: 2;
+	}
 }
